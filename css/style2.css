@@ -1,0 +1,266 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: url(https://decoraideas.com/wp-content/uploads/2016/06/31_guetzli-6.jpg);
+	font-family: 'Acme', sans-serif;
+    background-size: cover;
+}
+
+.wrap{
+	max-width: 1100px;
+	width: 90%;
+	margin: auto;
+}
+
+
+.wrap > h1:after{
+	content: '';
+	width: 100%;
+	height: 3px;
+	background: #F33;
+	margin: 20px 0;
+}
+.wrap > h3{
+	color:#fff;
+}
+
+.store-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.category_list{
+	display: flex;
+	width: 80%;
+	position: absolute;
+	top: 25%;
+}
+
+.category_list .category_item{
+	display: block;
+	width: 90%;
+	padding: 15px 0;
+	margin-bottom: 20px;
+	background: #E84C3D;
+
+	text-align: center;
+	text-decoration: none;
+	color: #FFF;
+}
+
+.category_list .ct_item-active{
+	background: #F63;
+}
+.boton_1{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: times new roman;
+    color: #f4f4f4;
+    background-color: #0833a2;
+    border-radius: 15px;
+    border: 3px double #3e5f8a;
+  }
+  .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+/* PRODUCTOS ============*/
+
+.products-list{
+	width: 82%;
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 35%;
+}
+
+
+.products-list .product-item{
+	width: 22%;
+	margin-left: 3%;
+	margin-bottom: 25px;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: flex-start;
+
+	transition: all .4s;
+}
+
+.products-list .product-item img{
+	
+}
+
+.products-list .product-item a{
+	display: block;
+	width: 100%;
+	padding: 8px 0;
+	background: #CECECE;
+	color: #000;
+	text-align: center;
+	text-decoration: none;
+}
+.products-list .product-item p{
+	background: #CECECE;
+	color: #000;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	width:100%;
+	padding: 8px 0;
+		
+}
+h1{
+	color: #fff;
+	font-family: 'Acme', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	top: 3%;
+}
+hr{
+	background:  #E84C3D;
+}
+.logo{
+	position: absolute;
+	top: 5%;
+	left: 0%;
+}
+.logo img{
+	width: 300px;
+	height: 100px;
+	border-radius: 10px;
+}
+.buscador{
+	position: absolute;
+	left: 35%;
+}
+.buscador fieldset{
+        background-color: #fff;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding: 0 0 0 40px;
+        display: inline-block;
+    }
+     .buscador input,button{
+        position: relative;
+        width: 400px;
+        height: 50px;
+        padding: 0;
+        float: left;
+    }
+    .buscador input {
+        border: none;
+        color: #666;
+        z-index: 2;
+    }
+    .buscador button{
+        width: 50px;
+        border: none;
+        background: #E84C3D;
+        font-size: 1.4em;
+        transform: translate(-50px,0);
+        transition-duration: .3s;
+    }
+    .buscador i .fa-search{
+        color: #bbb;
+        transform: translate(-190px,0);
+        transition:all .1s ease-in-out;
+    }
+    .buscador input:focus{
+        outline: none;
+    }
+    .buscador input:focus + button {
+        transform: translate(0,0);
+        transition-duration: .3s;
+
+    }
+     .buscador input:focus + button.fa{
+        color: #fff;
+        transform: translate(0,0);
+        transition-duration: .4s;
+    }
+    i{
+    	color: #fff;
+    }
+    .car{
+    	position: absolute;
+    	top: 28%;
+    	left: 5%;
+    }
+    .car i{
+    	color: #000;
+    	font-size: 25px;
+    }
+
+/* RESPONSIVE ================================*/
+
+@media screen and (max-width: 1100px){
+	.products-list .product-item{
+		width: 30.3%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.category_list,
+	.products-list{
+		width: 100%;
+	}
+
+	.category_list{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.category_list .category_item{
+		align-self: flex-start;
+		width: 15%;
+		font-size: 14px;
+	}
+
+	.products-list .product-item{
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.category_list{
+		flex-direction: column;
+	}
+	.category_list .category_item{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.products-list .product-item{
+		width: 47.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(2n+1){
+		margin-left: 0px;
+	}
+
+}
+
